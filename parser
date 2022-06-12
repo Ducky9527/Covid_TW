@@ -1,0 +1,8 @@
+import requests
+from bs4 import BeautifulSoup
+
+response = requests.get (
+	"https://www.cdc.gov.tw/Category/NewsPage/EmXemht4IT-IRAPrAnyG9A")
+soup = BeautifulSoup(response.text, "html.parser")
+
+print (soup.prettify())
